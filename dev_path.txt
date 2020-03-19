@@ -1,0 +1,8 @@
+Dev Path
+- Set up folder structure
+- Create database structure
+- Edit API
+- Build index page and a details page for products
+- Edit admin
+- Edit load.php (as required)
+
