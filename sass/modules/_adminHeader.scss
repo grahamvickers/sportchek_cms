@@ -1,0 +1,23 @@
+#mainHeader{
+    background-color: $button-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    #logo{
+        width: 200px;
+    }
+    #icon{
+        width: 50px;
+    }
+}
+
+#bannerPromo{
+    background-color: $secondary-bg-color;
+    padding: 5px;
+    a{
+        color: #f2f2f2;
+        font-size: 18px;
+
+    }
+}
