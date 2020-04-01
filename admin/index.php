@@ -36,25 +36,26 @@
     <div class="adminCon">
         <div class="optionCon">
             <img src="../images/user.svg" alt="Create user icon">
-            <a href="admin_createuser.php">Create User Now</a>
+            <a href="admin_addproduct.php">Add Product</a><br>
         </div>
 
         <div class="optionCon">
             <img src="../images/edit.svg" alt="Edit content icon">
-            <a href="admin_editUser.php">Edit User Now</a>
+            <a href="admin_updateproduct.php">Update Product</a>
         </div>
 
         <div class="optionCon">
             <img src="../images/delete.svg" alt="Edit content icon">
-            <a href="admin_deleteUsers.php">Remove Users Now</a>
+            <a href="admin_deleteproduct.php">Delete Product</a>
         </div>
+
 
         <div class="optionCon">
             <img src="../images/movie.svg" alt="signout icon">
-            <a href="admin_addmovie.php">SIGN OUT</a>
+            <a href="admin_login.php">SIGN OUT</a>
         </div>
     </div>
-    <a href="admin_login.php">SIGN OUT</a>
+
 
     <?php include '../templates/footer_admin.php'?>
 </body>
