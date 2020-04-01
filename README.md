@@ -1,4 +1,4 @@
-![](images/logo.svg)
+![](images/logo_git.svg)
 
 # SportChek Custom CMS
 
