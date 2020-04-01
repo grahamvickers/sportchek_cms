@@ -1,0 +1,49 @@
+// this is the styling for the dashboard
+
+.adminCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .optionCon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 300;
+        width: 250px;
+        background-color: #e4e4e4;
+        margin: 40px;
+        padding: 20px;
+        border-radius: 20px;
+
+        img{
+            width: 220px;
+            margin-bottom: 20px;
+        }
+        a{
+            border-radius: 30px; 
+            border-style: none;
+            background-color: $button-color;
+            padding: 10px;
+            margin: 10px;
+            font-size: 14px;
+            width: 150px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            :hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .adminCon{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
