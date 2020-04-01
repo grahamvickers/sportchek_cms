@@ -59,7 +59,7 @@ Move the project folder into either your 'htdocs' or 'WWW' folder within MAMP or
 ## Authors
 
 * **Graham Vickers** - *Lead Frontend Developer & Designer* - [Fanshawe College](https://github.com/grahamvickers)
-* **Collins** - *Lead Backend Developer* - [Fanshawe College](https://github.com/grahamvickers)
+* **Collins Ilo** - *Lead Backend Developer* - [Fanshawe College](https://github.com/junior231)
 
 ## Acknowledgments
 
