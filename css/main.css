@@ -342,6 +342,24 @@ textarea {
     color: #f2f2f2;
     font-size: 18px; }
 
+#mainHeader {
+  background-color: #3f3f3f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  #mainHeader #logo {
+    width: 200px; }
+  #mainHeader #icon {
+    width: 50px; }
+
+#bannerPromo {
+  background-color: #EB1E2F;
+  padding: 5px; }
+  #bannerPromo a {
+    color: #f2f2f2;
+    font-size: 18px; }
+
 #search {
   border-radius: 5px;
   border-style: none;

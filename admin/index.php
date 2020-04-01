@@ -16,6 +16,7 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
+<?php include '../templates/header_admin.php';?>
     <h2>
         <script>
             var day = new Date();
@@ -55,6 +56,6 @@
     </div>
     <a href="admin_login.php">SIGN OUT</a>
 
-    <?php include '../templates/footer.php'?>
+    <?php include '../templates/footer_admin.php'?>
 </body>
 </html>

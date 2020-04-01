@@ -21,10 +21,12 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Details</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>SportChek CMS</title>
 </head>
 <body>
-    <?php include 'templates/header.php'?>
+
+    <?php include 'templates/header.php';?>
     <?php if(!is_string($getMovie)):?>
         <?php while($row = $getMovie->fetch(PDO::FETCH_ASSOC)):?>
             <img src="images/<?php echo $row['movies_cover'];?>" alt="<?php echo $row['movies_title']?>">
