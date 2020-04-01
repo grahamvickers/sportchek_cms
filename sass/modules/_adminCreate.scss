@@ -1,0 +1,41 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+        border-radius: 5px; 
+        border-style: none;
+        //border: 2px solid $button-color;
+        padding: 10px;
+        font-size: 14px;
+        margin: 10px;
+        min-width: 280px;
+        text-decoration: none;
+        outline: none;
+        background-color: #f2f2f2;
+        border: 2px solid $button-color;
+    }
+    input:focus{
+        background-color: $button-color;
+        color: #f2f2f2;
+    }
+    button{
+        border-radius: 30px; 
+        border-style: none;
+        background-color: $button-color;
+        padding: 10px;
+        margin: 10px;
+        font-size: 14px;
+        width: 150px;
+        text-decoration: none;
+        color: white;
+        
+    }
+    button:hover{
+        cursor: pointer;
+    }
+
+    button:active{
+        text-decoration: none;
+    }
+}
