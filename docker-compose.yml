@@ -6,7 +6,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8010:80
+      - 8050:80
     volumes:
       - ./:/var/www/html/
     environment:
@@ -33,7 +33,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8011:80
+      - 8051:80
     environment:
       PMA_USER: docker_u
       PMA_PASSWORD: docker_p

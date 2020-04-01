@@ -2,8 +2,7 @@
 
 function redirect_to($location){
     if($location != null){
-        header('Location: '.$location);
+        header("Location: ".$location);
         exit;
     }
 }
-
