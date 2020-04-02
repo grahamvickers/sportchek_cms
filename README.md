@@ -4,9 +4,6 @@
 
 This project was made for the purpose of creating a mockup ecommerce store of SportChek and then create a fully functional custom CMS where new products can be updated and removed, as well as adding and removing users from the admin list.
 
-This site is host on Heroku 
-* [VIEW LIVE SITE]()
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
