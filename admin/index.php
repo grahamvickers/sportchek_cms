@@ -16,6 +16,7 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
+<?php include '../templates/header_admin.php';?>
     <h2>
         <script>
             var day = new Date();
@@ -35,26 +36,27 @@
     <div class="adminCon">
         <div class="optionCon">
             <img src="../images/user.svg" alt="Create user icon">
-            <a href="admin_createproduct.php">Create Product Now</a>
+            <a href="admin_addproduct.php">Add Product</a><br>
         </div>
 
         <div class="optionCon">
             <img src="../images/edit.svg" alt="Edit content icon">
-            <a href="admin_editproduct.php">Edit Products Now</a>
+            <a href="admin_updateproduct.php">Update Product</a>
         </div>
 
         <div class="optionCon">
             <img src="../images/delete.svg" alt="Edit content icon">
-            <a href="admin_deleteproducts.php">Remove Product Now</a>
+            <a href="admin_deleteproduct.php">Delete Product</a>
         </div>
+
 
         <div class="optionCon">
             <img src="../images/movie.svg" alt="signout icon">
-            <a href="admin_addproduct.php">SIGN OUT</a>
+            <a href="admin_login.php">SIGN OUT</a>
         </div>
     </div>
-    <a href="admin_login.php">SIGN OUT</a>
 
-    <?php include '../templates/footer.php'?>
+
+    <?php include '../templates/footer_admin.php'?>
 </body>
 </html>

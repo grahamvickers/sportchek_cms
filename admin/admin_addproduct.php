@@ -1,27 +1,26 @@
-<?php
+<?php 
+
 require_once '../load.php';
 confirm_logged_in();
 
-$genre_table = 'tbl_genre';
-$genres      = getAll($genre_table);
-
+// handle form submission
 if (isset($_POST['submit'])) {
-    $movie = array(
-        'cover'   => $_FILES['cover'],
-        'title'   => trim($_POST['title']),
-        'year'    => trim($_POST['year']),
-        'run'     => trim($_POST['run']),
-        'story'   => trim($_POST['story']),
-        'trailer' => trim($_POST['trailer']),
-        'release' => trim($_POST['release']),
-        'genre'   => trim($_POST['genList']),
+    $product = array(
+        'img'   => $_FILES['image'],
+        'details'   => trim($_POST['details']),
+        'price'    => trim($_POST['price']),
+        'rating'     => trim($_POST['rating']),
+        'cat'   => trim($_POST['cat']),
+        'name' => trim($_POST['name']),
+        'sex' => trim($_POST['sex']),
     );
 
-    $result  = addMovie($movie);
+    $result = addProduct($product);
     $message = $result;
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,48 +29,35 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Poppins&display=swap" rel="stylesheet">
-    <title>Add Movie</title>
+    <title>Create Product</title>
 </head>
-    <body>
-        <a href="index.php">HOME</a>
-        <a href="admin_logout.php">LOGOUT</a>
-        <h2>Add Movie</h2>
+<body>
+    <h2>Add New Product</h2>
+    <?php echo !empty($message)? $message: ''; ?>
+    <form action="admin_addproduct.php" method="post">
+        <label>Product Name</label><br>
+        <input type="text" name="name" value=""><br><br>
 
-        <?php echo !empty($message) ? $message : ''; ?>
-        <form action="admin_addmovie.php" method="post" enctype="multipart/form-data">
-            <label>Cover Image:</label>
-            <input type="file" name="cover" value="">
+        <label>Product Details</label><br>
+        <textarea name="details"></textarea><br><br>
 
-            <label>Movie Title:</label>
-            <input type="text" name="title" value="">
+        <label>Product Price</label><br>
+        <input type="text" name="price" value=""><br><br>
 
-            <label>Movie Year:</label>
-            <input type="text" name="year" value="">
+        <label>Product Image</label><br>
+        <input type="file" name="image" value=""><br><br>
 
-            <label>Movie Runtime:</label>
-            <input type="text" name="run" value="">
+        <label>Product Sex</label><br>
+        <input type="text" name="sex" value=""><br><br>
 
-            <label>Movie Release:</label>
-            <input type="text" name="release" value="">
+        <label>Product Category</label><br>
+        <input type="text" name="cat" value=""><br><br>
 
-            <label>Movie Trailer:</label>
-            <input type="text" name="trailer" value="">
+        <label>Product Rating</label><br>
+        <input type="text" name="rating" value=""><br><br>
 
-            <label>Movie Storyline:</label>
-            <textarea name="story"></textarea>
 
-            <label>Movie Genre:</label>
-            <select name="genList">
-                <option>Please select a movie genre..</option>
-                <?php while ($row = $genres->fetch(PDO::FETCH_ASSOC)): ?>
-                    <option value="<?php echo $row['genre_id'] ?>"><?php echo $row['genre_name']; ?></option>
-                <?php endwhile;?>
-            </select>
-            
-            <button type="submit" name="submit">Add Movie</button>
-        </form>
-
-    <?php include '../templates/footer.php'?>
-
-    </body>
+        <button name="submit">Create Product</button>
+    </form>
+</body>
 </html>

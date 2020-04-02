@@ -1,4 +1,4 @@
-![](images/logo.svg)
+![](images/logo_git.svg)
 
 # SportChek Custom CMS
 
@@ -64,3 +64,7 @@ Move the project folder into either your 'htdocs' or 'WWW' folder within MAMP or
 ## Acknowledgments
 
 * Shoutout to [Pan](https://github.com/spiderPan) for teaching us PHP and helping us understand API's and how to manipulate the data.
+
+## License
+
+MIT
