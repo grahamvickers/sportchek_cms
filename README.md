@@ -32,6 +32,11 @@ Open the project in your terminal, then paste the following and go.
 $ docker-compose up
 ```
 
+Then in the browser of your choice, paste the following url:
+```
+localhost:8050
+```
+
 Using MAMP/ WAMP:
 
 Move the project folder into either your 'htdocs' or 'WWW' folder within MAMP or WAMP. Then navigate to your MAMP or WAMP server page and select the project.
