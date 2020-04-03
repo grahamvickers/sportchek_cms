@@ -450,7 +450,7 @@ table {
       width: 220px;
       margin-bottom: 20px; }
     .adminCon .optionCon a {
-      border-radius: 30px;
+      border-radius: 5px;
       border-style: none;
       background-color: #3f3f3f;
       padding: 10px;
@@ -464,11 +464,12 @@ table {
       .adminCon .optionCon a :hover {
         cursor: pointer; }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 960px) {
   .adminCon {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; } }
+    justify-content: space-around;
+    margin-bottom: 110px; } }
 form {
   display: flex;
   flex-direction: column;
@@ -488,7 +489,7 @@ form {
     background-color: #3f3f3f;
     color: #f2f2f2; }
   form button {
-    border-radius: 30px;
+    border-radius: 5px;
     border-style: none;
     background-color: #3f3f3f;
     padding: 10px;
