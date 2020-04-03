@@ -6,9 +6,9 @@ require_once 'load.php';
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $tbl = 'tbl_movies';
-    $col = 'movies_id';
-    $getMovie = getSingleMovie($tbl, $col, $id);
+    $tbl = 'tbl_products';
+    // $col = 'movies_id';
+    $getMovie = getSingleProducts($tbl, $id);
 }
 
 //var_dump($getMovies);exit;
