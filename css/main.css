@@ -382,6 +382,23 @@ textarea {
 @media screen and (min-width: 600px) {
   #search {
     width: 400px; } }
+table {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  margin: 0 auto; }
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px; }
+  table th {
+    font-size: 26px; }
+  table tr:nth-child(even) {
+    background-color: #e2e2e2; }
+  table tr:hover {
+    background-color: #a8a8a8; }
+  table #delete {
+    font-size: 20px; }
+  table #delete:hover {
+    color: #f2f2f2f2; }
+
 #browse {
   text-align: left;
   border-bottom: 2px solid #3f3f3f;
@@ -520,6 +537,12 @@ h4 {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   color: #f2f2f2;
   font-size: 22px; }
+
+h5 {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: #3f3f3f;
+  font-size: 22px;
+  margin-bottom: 60px; }
 
 p {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;

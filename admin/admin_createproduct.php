@@ -33,8 +33,8 @@ if(isset($_POST['submit'])){
     <title>Create Admin User</title>
 </head>
 <body>
-    <a href="index.php">HOME</a>
-    <a href="admin_logout.php">LOGOUT</a>
+<?php include '../templates/header_admin.php'?>
+
     <h2>Create a new product</h2>
     <!-- <h4>Don't worry about making a password, it will make one for you.</h4> -->
 
@@ -56,11 +56,11 @@ if(isset($_POST['submit'])){
 
                 <input type="text" name="rating" value="" placeholder="Product Rating">
 
-                <button name="submit">CREATE PRODUCT</button>
+                <button name="submit">UPLOAD</button>
             </form>
         </div>
     </div>
     
-    <?php include '../templates/footer.php'?>
+    <?php include '../templates/footer_admin.php'?>
 </body>
 </html>
