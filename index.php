@@ -2,6 +2,22 @@
 require_once 'load.php';
 
 // add filter here
+if(isset($_GET['filter'])){
+    //filter
+    $args = array(
+        'tbl' =>'tbl_products',
+        // 'tbl2' =>'tbl_genre',
+        // 'tbl3'=>'tbl_mov_genre',
+        // 'col'=>'movies_id',
+        // 'col2'=>'genre_id',
+        // 'col3'=>'genre_name',
+        'filter'=>$_GET['filter']
+    );
+    $getProducts = getProductsByFilter($args);
+ }else{
+     $product_table = 'tbl_products';
+     $getProduct = getAll($product_table);
+ }
 
 ?>
 
@@ -30,6 +46,16 @@ require_once 'load.php';
                 <button class="filter"><a href="index.php?filter=gear">GEAR</a></button>
                 <button class="filter"><a href="index.php?filter=deals">DEALS</a></button>
             </div>
+
+        <!-- this is to display all products -->
+            <?php while($row = $getProduct->fetch(PDO::FETCH_ASSOC)):?>
+            <div class="product-item">
+                <img src="images/<?php echo $row['prod_img']; ?>" alt="<?php echo $row['prod_name'];?>" />
+                <h2><?php echo $row['prod_name'];?></h2>
+                <h4> Details: <?php echo $row['prod_details'];?></h4>
+                <a href="details.php?id=<?php echo $row['prod_id'];?>">Read More...</a>
+            </div>
+            <?php endwhile;?>
         </div>
 
         <div id="browse">
