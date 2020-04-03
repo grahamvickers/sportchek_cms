@@ -150,21 +150,4 @@ function getAllUsers(){
     }
 }
 
-function deleteUser($id){
-    $pdo = Database::getInstance()->getConnection();
 
-    $delete_user_query = "DELETE FROM tbl_user WHERE user_id = :id";
-    $delete_user_set = $pdo->prepare($delete_user_query);
-    $delete_user_result = $delete_user_set->execute(
-        array(
-            ':id'=>$id
-        )
-    );
-
-    if($delete_user_result && $delete_user_set->rowCount() > 0){
-        redirect_to('admin_deleteUsers.php');
-    }else{
-        // user does not exist
-        return false;
-    }
-}

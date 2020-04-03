@@ -4,19 +4,23 @@
 
 
     $id = $_SESSION['user_id'];
-    $user = getSingleUser($id);
+    // $user = getSingleUser($id);
+    $product = getSingleProduct($id);
 
-    if(is_string($user)){
-        $message = $user;
+    if(is_string($product)){
+        $message = $product;
     }
 
     if(isset($_POST['submit'])){
-        $fname = trim($_POST['fname']);
-        $username = trim($_POST['username']);
-        $password = trim($_POST['password']);
-        $email = trim($_POST['email']);
+        $prod_name = trim($_POST['name']);
+        $prod_details = trim($_POST['details']);
+        $prod_price = trim($_POST['price']);
+        $prod_img = trim($_POST['cover']);
+        $prod_sex = trim($_POST['sex']);
+        $prod_cat = trim($_POST['cat']);
+        $prod_rating = trim($_POST['rating']);
 
-        $message = editUser($id, $fname, $username, $password, $email);
+        $message = editProduct($id, $prod_name, $prod_details, $prod_img, $prod_sex, $prod_cat, $prod_rating, $prod_price);
     }
 ?>
 
@@ -28,26 +32,32 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="../css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Poppins&display=swap" rel="stylesheet">
-        <title>Edit User</title>
+        <title>Edit Product</title>
     </head>
     <body>
         <a href="index.php">HOME</a>
         <a href="admin_logout.php">LOGOUT</a>
-        <h2>Edit User Information</h2>
+        <h2>Edit Product Information</h2>
         <?php echo !empty($message)? $message : '';?>
         <div>
             <div>
-                <form action="admin_editUser.php" method="post">
+                <form action="admin_editproduct.php" method="post">
 
-                    <?php while($info=$user->fetch(PDO::FETCH_ASSOC)):?>
+                    <?php while($info=$product->fetch(PDO::FETCH_ASSOC)):?>
 
-                    <input type="text" name="fname" value="<?php echo $info['user_fname'];?>" placeholder="Full Name">
+                    <input type="text" name="name" value="<?php echo $info['prod_name'];?>" placeholder="Product Name">
 
-                    <input type="text" name="username" value="<?php echo $info['user_name'];?>" placeholder="Username">
+                    <input type="text" name="details" value="<?php echo $info['prod_details'];?>" placeholder="Product Details">
                     
-                    <input type="text" name="password" value="<?php echo $info['user_pass'];?>" placeholder="Password">
+                    <input type="text" name="price" value="<?php echo $info['prod_price'];?>" placeholder="Product Price">
 
-                    <input type="text" name="email" value="<?php echo $info['user_email'];?>" placeholder="Email">
+                    <input type="file" name="cover" value="<?php echo $info['prod_img'];?>" placeholder="Product Image">
+
+                    <input type="text" name="sex" value="<?php echo $info['prod_sex'];?>" placeholder="Product Sex">
+
+                    <input type="text" name="cat" value="<?php echo $info['prod_cat'];?>" placeholder="Product Category">
+
+                    <input type="text" name="rating" value="<?php echo $info['prod_rating'];?>" placeholder="Product Rating">
                     
                     <?php endwhile?>
                     <button type="submit" name="submit">SAVE CHANGES</button>
