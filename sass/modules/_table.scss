@@ -1,0 +1,19 @@
+table{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    th{
+        font-size: 26px;
+    }
+    tr:nth-child(even){background-color: rgb(226, 226, 226);}
+    tr:hover {background-color: rgb(168, 168, 168);}
+    #delete{
+        font-size: 20px;
+    }
+    #delete:hover{
+        color: #f2f2f2f2;
+    }
+}

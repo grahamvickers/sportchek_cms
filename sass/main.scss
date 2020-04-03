@@ -6,6 +6,7 @@
 @import 'modules/_header';
 @import 'modules/_adminHeader';
 @import 'modules/_filter';
+@import 'modules/_table';
 @import 'modules/_content';
 @import 'modules/_promo';
 @import 'modules/_adminDashboard';
@@ -54,6 +55,13 @@ h4{
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     color: $h4-color;
     font-size: 22px;
+}
+
+h5{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: $button-color;
+    font-size: 22px;
+    margin-bottom: 60px;
 }
 
 p{

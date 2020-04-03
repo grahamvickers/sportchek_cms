@@ -35,8 +35,8 @@
         <title>Edit Product</title>
     </head>
     <body>
-        <a href="index.php">HOME</a>
-        <a href="admin_logout.php">LOGOUT</a>
+    <?php include '../templates/header_admin.php'?>
+
         <h2>Edit Product Information</h2>
         <?php echo !empty($message)? $message : '';?>
         <div>
@@ -60,11 +60,11 @@
                     <input type="text" name="rating" value="<?php echo $info['prod_rating'];?>" placeholder="Product Rating">
                     
                     <?php endwhile?>
-                    <button type="submit" name="submit">SAVE CHANGES</button>
+                    <button type="submit" name="submit">SAVE</button>
 
                 </form>
             </div>
         </div>
-        <?php include '../templates/footer.php'; ?>
+        <?php include '../templates/footer_admin.php'; ?>
     </body>
 </html>

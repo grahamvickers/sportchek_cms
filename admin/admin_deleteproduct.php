@@ -29,11 +29,11 @@
     <title>Delete Products</title>
 </head>
 <body>
-    <a href="index.php">HOME</a>
-    <a href="admin_logout.php">LOGOUT</a>
+<?php include '../templates/header_admin.php'?>
 
-    <h2>Delete an unwanted Product</h2>
-    <h4>Get Rid of a product? get it outta here by clicking DELETE</h4>
+
+    <h2>Remove product from database</h2>
+    <h5>Get Rid of a product? get it outta here by clicking DELETE</h5>
 
     <?php echo !empty($message)? $message : '';?>
     <table>
@@ -41,7 +41,7 @@
             <tr>
                 <th>PRODUCT ID</th>
                 <th>PRODUCT NAME</th>
-                <th>DELETE</th>
+                <th>ACTION</th>
             </tr>
         </thead>
         <tbody>
@@ -49,12 +49,12 @@
             <tr>
                 <td><?php echo $product['prod_id'];?></td>
                 <td><?php echo $product['prod_name'];?></td>
-                <td><a href="admin_deleteproduct.php?id=<?php echo $product['prod_id'];?>">DELETE PRODUCT</a></td>
+                <td><a id="delete" href="admin_deleteproduct.php?id=<?php echo $product['prod_id'];?>">DELETE</a></td>
             </tr>
         <?php endwhile;?>
         </tbody>
     </table>
 
-    <?php include '../templates/footer.php'?>
+    <?php include '../templates/footer_admin.php'?>
 </body>
 </html>
