@@ -33,7 +33,7 @@
 
     <h2>Login Page</h2>
     <?php echo !empty($message)? $message: ''; ?>
-    <form action="admin_login.php" method="post">
+    <form action="admin_login.php" method="post" id="login">
         <label for="">Username:</label>
         <input type="text" name="username" id="username" value="" placeholder="Knock knock, whos there?">
 
