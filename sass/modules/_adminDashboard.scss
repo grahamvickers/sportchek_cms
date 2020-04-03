@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     .optionCon{
         display: flex;
         flex-direction: column;
@@ -22,7 +21,7 @@
             margin-bottom: 20px;
         }
         a{
-            border-radius: 30px; 
+            border-radius: 5px; 
             border-style: none;
             background-color: $button-color;
             padding: 10px;
@@ -40,10 +39,11 @@
     }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 960px) {
     .adminCon{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        margin-bottom: 110px;
     }
 }
