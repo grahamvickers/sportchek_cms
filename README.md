@@ -2,7 +2,7 @@
 
 # SportChek Custom CMS
 
-This project was made for the purpose of creating a mockup ecommerce store of SportChek and then create a fully functional custom CMS where new products can be updated and removed, as well as adding and removing users from the admin list.
+This project was made for the purpose of creating a mockup ecommerce store of SportChek and then create a fully functional custom CMS where new products can be upploaded, updated and removed.
 
 ## Getting Started
 
@@ -40,6 +40,10 @@ localhost:8050
 Using MAMP/ WAMP:
 
 Move the project folder into either your 'htdocs' or 'WWW' folder within MAMP or WAMP. Then navigate to your MAMP or WAMP server page and select the project.
+
+Next, go to your phpmyadmin page and create a new database named 'db_sportchek'. Then import the database "db_sportchek" from the db folder in the proect folder. 
+
+After the upload is completed, you will now be able to access the backend CMS. 
 
 
 ## Built With
