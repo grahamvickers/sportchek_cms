@@ -8,4 +8,7 @@
     <div>
         <p>©<?php echo date('Y');?> Copyright C&G Ltd. All Rights Reserved</p>
     </div>
+    <div>
+        <a href="admin/admin_login.php" id="adminLink">Admin Portal</a>
+    </div>
 </footer>

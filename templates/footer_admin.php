@@ -8,4 +8,7 @@
     <div>
         <p>©<?php echo date('Y');?> Copyright C&G Ltd. All Rights Reserved</p>
     </div>
+    <div>
+        <a href="../index.php" id="adminLink">SHOP PAGE</a>
+    </div>
 </footer>

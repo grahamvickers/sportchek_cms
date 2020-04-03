@@ -92,4 +92,12 @@ a:hover{
     color: $heading-color;
 }
 
+#adminLink{
+    color: #f2f2f2;
+    font-size: 14px;
+}
+#adminLink:hover{
+    color: #EB1E2F;
+}
+
 @import 'modules/_footer';

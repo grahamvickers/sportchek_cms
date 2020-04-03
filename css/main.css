@@ -469,7 +469,11 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 110px; } }
+    margin-bottom: 110px; }
+
+  #login {
+    margin-top: 100px;
+    margin-bottom: 280px; } }
 form {
   display: flex;
   flex-direction: column;
@@ -566,6 +570,13 @@ label {
   font-size: 18px; }
 
 a:hover {
+  color: #EB1E2F; }
+
+#adminLink {
+  color: #f2f2f2;
+  font-size: 14px; }
+
+#adminLink:hover {
   color: #EB1E2F; }
 
 footer {
