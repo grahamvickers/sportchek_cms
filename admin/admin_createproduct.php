@@ -4,14 +4,18 @@
     user_verification();
 
 if(isset($_POST['submit'])){
-    $fname = trim($_POST['fname']);
-    $username = trim($_POST['username']);
-    $email = trim($_POST['email']);
+    $prod_name = trim($_POST['name']);
+    $prod_details = trim($_POST['details']);
+    $prod_price = trim($_POST['price']);
+    $prod_img = trim($_POST['cover']);
+    $prod_sex = trim($_POST['sex']);
+    $prod_cat = trim($_POST['cat']);
+    $prod_rating = trim($_POST['rating']);
 
-    if(empty($email) || empty($username) || empty($fname)){
+    if(empty($prod_name) || empty($prod_details) || empty($prod_img) || empty($prod_price) || empty($prod_sex) || empty($prod_cat) || empty($prod_rating)){
         $message = 'Please fill out the required fields';
     }else{
-        $message = createUser($fname, $username, $email);
+        $message = createProduct($id, $prod_name, $prod_details, $prod_img, $prod_sex, $prod_cat, $prod_rating, $prod_price);
     }
 }
 ?>
@@ -31,20 +35,28 @@ if(isset($_POST['submit'])){
 <body>
     <a href="index.php">HOME</a>
     <a href="admin_logout.php">LOGOUT</a>
-    <h2>Create a new user</h2>
-    <h4>Don't worry about making a password, it will make one for you.</h4>
+    <h2>Create a new product</h2>
+    <!-- <h4>Don't worry about making a password, it will make one for you.</h4> -->
 
     <?php echo!empty($message)? $message: '';?>
     <div>
         <div>
-            <form action="admin_createuser.php" method="post">
-                <input type="text" name="fname" value="" placeholder="First Name"><br><br>
-                
-                <input type="text" name="username" value="" placeholder="Username"><br><br>
+            <form action="admin_createproduct.php" method="post">
+                <input type="text" name="name" value="" placeholder="Product Name">
 
-                <input type="email" name="email" value="" placeholder="Email"><br><br>
+                <input type="text" name="details" value="" placeholder="Product Details">
 
-                <button name="submit">CREATE USER</button>
+                <input type="text" name="price" value="" placeholder="Product Price">
+
+                <input type="file" name="cover" value="" placeholder="Product Image">
+
+                <input type="text" name="sex" value="" placeholder="Product Sex">
+
+                <input type="text" name="cat" value="" placeholder="Product Category">
+
+                <input type="text" name="rating" value="" placeholder="Product Rating">
+
+                <button name="submit">CREATE PRODUCT</button>
             </form>
         </div>
     </div>

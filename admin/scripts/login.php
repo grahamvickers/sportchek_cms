@@ -84,7 +84,7 @@ function user_verification(){
         if($userVerification['user_verif'] == '0'){
 
             // if not verified yet redirect to the edit page
-            redirect_to('admin_editUser.php');
+            redirect_to('admin_editproduct.php');
         }
 }
 

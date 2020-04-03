@@ -11,6 +11,7 @@ require_once '../load.php';
     $db       = Database::getInstance()->getConnection();
 
 // initialize object
+// $products = new Products($db);
 $users = new Users($db);
 
 // query movies

@@ -28,7 +28,6 @@
     <title>Admin Login</title>
 </head>
 <body>
-<?php include '../templates/header_admin.php';?>
     <h2>Login Page</h2>
     <?php echo !empty($message)? $message: ''; ?>
     <form action="admin_login.php" method="post">
@@ -41,6 +40,6 @@
         <button name="submit">Submit</button>
     </form>
 
-    <?php include '../templates/footer_admin.php'?>
+    <?php include '../templates/footer.php'?>
 </body>
 </html>
