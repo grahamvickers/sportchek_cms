@@ -12,7 +12,7 @@ function getAll($tbl){
     }
 }
 
-function getSingleMovie($tbl, $col, $id){
+function getSingleProducts($tbl, $col, $id){
     //TO DO: finish the function based on getALL, this time only return one movies feild
 
     $pdo = Database::getInstance()->getConnection();

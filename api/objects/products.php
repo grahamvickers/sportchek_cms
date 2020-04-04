@@ -27,4 +27,20 @@ class Product
 
         return $stmt;
     }
+
+    public function getProductByID($id)
+    {
+        $query = 'SELECT * FROM tbl_products WHERE id = prod_id';
+      
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+        }
+    }
+
 }
