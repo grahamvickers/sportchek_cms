@@ -1,0 +1,42 @@
+// this is the styling for all products and the lay out for them
+
+#products{
+    .product-item{
+        margin: 30px;
+        h3{
+            font-size: 22px;
+            margin-top: 10px;
+        }
+        h4{
+            color: #3f3f3f;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+        a{
+            color: #f2f2f2;
+            background-color: #3f3f3f;
+            font-size: 18px;
+            padding: 8px 22px 8px 22px;
+            border-radius: 5px;
+        }
+    }
+}
+.product-img{
+    width: 200px;
+}
+
+@media screen and (min-width: 760px){
+    #products{
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+    .product-item{
+        margin: 4px;
+        flex: 1;
+        flex-basis: 20%;
+        height: inherit;
+    }
+}

@@ -342,6 +342,38 @@ textarea {
     color: #f2f2f2;
     font-size: 18px; }
 
+#products .product-item {
+  margin: 30px; }
+  #products .product-item h3 {
+    font-size: 22px;
+    margin-top: 10px; }
+  #products .product-item h4 {
+    color: #3f3f3f;
+    margin: 10px;
+    margin-bottom: 20px; }
+  #products .product-item a {
+    color: #f2f2f2;
+    background-color: #3f3f3f;
+    font-size: 18px;
+    padding: 8px 22px 8px 22px;
+    border-radius: 5px; }
+
+.product-img {
+  width: 200px; }
+
+@media screen and (min-width: 760px) {
+  #products {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    text-align: center;
+    width: 100%; }
+
+  .product-item {
+    margin: 4px;
+    flex: 1;
+    flex-basis: 20%;
+    height: inherit; } }
 #mainHeader {
   background-color: #3f3f3f;
   display: flex;
@@ -382,6 +414,46 @@ textarea {
 @media screen and (min-width: 600px) {
   #search {
     width: 400px; } }
+#details {
+  margin: 20px;
+  text-align: left; }
+  #details img {
+    margin: 20px;
+    width: 200px; }
+  #details p {
+    color: #3f3f3f;
+    margin: 20px;
+    margin-bottom: 20px; }
+  #details h3 {
+    margin: 20px; }
+  #details h4 {
+    margin: 20px;
+    color: #3f3f3f; }
+  #details a {
+    background-color: #EB1E2F;
+    border: solid 2px #EB1E2F;
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 22px 8px 22px;
+    border-radius: 5px; }
+  #details a:hover {
+    background-color: white;
+    border: solid 2px #EB1E2F;
+    color: #EB1E2F;
+    transition: ease .2s; }
+  #details #addCart {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+
+@media screen and (min-width: 640px) {
+  #details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    #details img {
+      width: 300px; }
+    #details #more {
+      margin: 20px; } }
 table {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   margin: 0 auto; }
@@ -511,7 +583,7 @@ form {
   display: none; }
 
 body {
-  background-color: #f2f2f2;
+  background-color: white;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -571,6 +643,10 @@ label {
 
 a:hover {
   color: #EB1E2F; }
+
+.test {
+  color: black;
+  font-size: 24px; }
 
 #adminLink {
   color: #f2f2f2;
