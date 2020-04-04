@@ -40,7 +40,7 @@ class Product
         $stmt->execute();
 
         return $stmt;
-        }
+        
     }
 
 }
