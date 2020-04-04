@@ -39,7 +39,9 @@ if(isset($_GET['id'])){
                 <div id="more">
                     <h3><?php echo $row['prod_name'];?></h3>
                     <h4>$<?php echo $row['prod_price'];?></h4>
-                    <p> <?php echo $row['prod_details'];?></p>
+                    <div>
+                        <p> <?php echo $row['prod_details'];?></p>
+                    </div>
                     <div id="addCart">
                         <a href="index.php">ADD TO CART</a>
                     </div>
