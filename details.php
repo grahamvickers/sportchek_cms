@@ -7,8 +7,8 @@ require_once 'load.php';
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     $tbl = 'tbl_products';
-    // $col = 'movies_id';
-    $getMovie = getSingleProducts($tbl, $id);
+    $col = 'prod_id';
+    $getProduct = getSingleProducts($tbl, $col, $id);
 }
 
 //var_dump($getMovies);exit;
@@ -27,13 +27,12 @@ if(isset($_GET['id'])){
 <body>
 
     <?php include 'templates/header.php';?>
-    <?php if(!is_string($getMovie)):?>
-        <?php while($row = $getMovie->fetch(PDO::FETCH_ASSOC)):?>
-            <img src="images/<?php echo $row['movies_cover'];?>" alt="<?php echo $row['movies_title']?>">
+    <?php if(!is_string($getProduct)):?>
+        <?php while($row = $getProduct->fetch(PDO::FETCH_ASSOC)):?>
+            <img src="images/<?php echo $row['prod_img'];?>" alt="<?php echo $row['prod_name']?>">
 
-            <h2>Name: <?php echo $row['movies_title'];?></h2>
-            <h4>Year: <?php echo $row['movies_year'];?></h4>
-            <p>Story: <br> <?php echo $row['movies_storyline'];?></p>
+            <h2>Name: <?php echo $row['prod_name'];?></h2>
+            <article class="test">Details: <br> <?php echo $row['prod_details'];?></article>
             <a href="index.php">BACK HOME</a>
         <?php endwhile;?>
     <?php endif;?>

@@ -17,11 +17,9 @@ $movie = new Product($db);
 // edit query with right database credentials
 // query movies
 if (isset($_GET['id'])) {
-    $stmt = $movie->getMovieByID($_GET['id']);
-} else if(isset($_GET['genre'])){
-    $stmt = $movie->getMovieByGenre($_GET['genre']);
+    $stmt = $product->getProductByID($_GET['id']);
 }else {
-    $stmt = $movie->getMovies();
+    $stmt = $product->getProduct();
 }
 
 $num = $stmt->rowCount();
@@ -29,12 +27,12 @@ $num = $stmt->rowCount();
 // check if more than 0 record found
 if ($num > 0) {
 
-    // movies array
+    // products array
     $results = array();
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $single_movie = $row;
-        $results[]    = $single_movie;
+        $single_product = $row;
+        $results[]    = $single_product;
     }
 
     //TODO:chat about JSON_PRETTY_PRINT vs not
@@ -42,7 +40,7 @@ if ($num > 0) {
 } else {
     echo json_encode(
         array(
-            "message" => "No movies found.",
+            "message" => "No products found.",
         )
     );
 }
