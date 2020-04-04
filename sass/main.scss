@@ -4,8 +4,10 @@
 @import 'modules/_reset';
 @import '_vars';
 @import 'modules/_header';
+@import 'modules/_products';
 @import 'modules/_adminHeader';
 @import 'modules/_filter';
+@import 'modules/_details';
 @import 'modules/_table';
 @import 'modules/_content';
 @import 'modules/_promo';
@@ -19,7 +21,7 @@
 }
 
 body{
-   background-color: #f2f2f2;
+   background-color: white;
    box-sizing: border-box;
    width: 100%;
    height: 100%;
