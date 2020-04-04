@@ -37,10 +37,10 @@ if(isset($_GET['filter'])){
             <div id="filters">
                 <button class="filter"><a href="index.php?filter=men">MEN</a></button>
                 <button class="filter"><a href="index.php?filter=women">WOMEN</a></button>
-                <button class="filter"><a href="index.php?filter=kids">KIDS</a></button>
+                <!-- <button class="filter"><a href="index.php?filter=kids">KIDS</a></button>
                 <button class="filter"><a href="index.php?filter=shoes">SHOES</a></button>
                 <button class="filter"><a href="index.php?filter=gear">GEAR</a></button>
-                <button class="filter"><a href="index.php?filter=deals">DEALS</a></button>
+                <button class="filter"><a href="index.php?filter=deals">DEALS</a></button> -->
             </div>
 
         <!-- this is to display all products -->
